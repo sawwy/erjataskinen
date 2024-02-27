@@ -12,12 +12,12 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
+    <div className="grid grid-cols-1 gap-4 p-4 font-sans leading-7">
       <h1 className="text-4xl">Welcome to Remix (with Vite and Cloudflare)</h1>
       <ul>
         <li>
           <a
-            className="text-4xl"
+            className="text-xl text-blue-900 transition-colors hover:text-blue-500"
             target="_blank"
             href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/"
             rel="noreferrer"
@@ -26,7 +26,12 @@ export default function Index() {
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+          <a
+            className="text-xl text-blue-900 transition-colors hover:text-blue-500"
+            target="_blank"
+            href="https://remix.run/docs"
+            rel="noreferrer"
+          >
             Remix Docs
           </a>
         </li>
