@@ -17,9 +17,11 @@
     "@remix-run/cloudflare-pages": "^2.7.2",
     "@remix-run/react": "^2.7.2",
     "isbot": "^4.1.0",
+    "leaflet": "^1.9.4",
     "miniflare": "^3.20231030.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230518.0",

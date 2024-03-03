@@ -1,4 +1,6 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import { ClientOnly } from '~/client-only';
+import { Map } from '~/map.client';
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,7 +12,15 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const links: LinksFunction = () => [
+  {
+    rel: 'stylesheet',
+    href: 'https://unpkg.com/leaflet@1.8.0/dist/leaflet.css',
+  },
+];
+
 export default function Index() {
+  const mapHeight = '400px';
   return (
     <div className="grid grid-cols-1 gap-4 p-4 font-sans leading-7">
       <h1 className="text-4xl">Welcome to Remix (with Vite and Cloudflare)</h1>
@@ -36,6 +46,9 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <ClientOnly fallback={<div id="skeleton" style={{ height: mapHeight, background: '#d1d1d1' }} />}>
+        {() => <Map height={mapHeight} />}
+      </ClientOnly>
     </div>
   );
 }
