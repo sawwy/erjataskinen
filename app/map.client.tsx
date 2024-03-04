@@ -2,7 +2,7 @@ import type { LatLngTuple } from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 export function Map({ height }: { height: string }) {
-  const position: LatLngTuple = [51.505, -0.09];
+  const position: LatLngTuple = [68.65971145976921, 27.538934662466406];
 
   return (
     <div style={{ height }}>
