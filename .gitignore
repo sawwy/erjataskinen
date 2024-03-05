@@ -7,3 +7,5 @@ node_modules
 .env
 
 .wrangler
+
+/app/graphql/__generated__

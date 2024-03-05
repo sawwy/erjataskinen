@@ -544,6 +544,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.relative {
+  position: relative;
+}
+
 .grid {
   display: grid;
 }

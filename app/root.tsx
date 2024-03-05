@@ -1,5 +1,7 @@
+import { ApolloProvider } from '@apollo/client/index.js';
 import { LinksFunction } from '@remix-run/node';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
+import { graphQLClient } from './graphql/apolloClient';
 
 import styles from './app.gen.css?url';
 
@@ -24,5 +26,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <ApolloProvider client={graphQLClient}>
+      <Outlet />
+    </ApolloProvider>
+  );
 }
